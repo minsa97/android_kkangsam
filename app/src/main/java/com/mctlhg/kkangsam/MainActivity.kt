@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         // 이름,문자열 출력 TextView 생성
         val name= TextView(this).apply{
             typeface= Typeface.DEFAULT_BOLD
-            text="Lake Luise"
+            text="Lake Louise"
         }
         // 이미지 출력 ImageView 생성
         val image=ImageView(this).also{
