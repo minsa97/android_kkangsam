@@ -10,8 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kkangsam">
         <activity
-            android:name=".lab8.StopWatchTest"
-            android:exported="true" >
+            android:name=".lab9.ButtonColor"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".lab8.Checkbox_Test"/>
+        <activity android:name=".lab8.StopWatchTest" />
+        <activity android:name=".lab8.Checkbox_Test" />
         <activity android:name=".lab8.Test1Activity" />
         <activity android:name=".lab7.Telephone_keypad" />
         <activity android:name=".lab6.Kakao_pw" />
