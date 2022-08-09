@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kkangsam">
         <activity
-            android:name=".lab9.DeviceSizeTest"
+            android:name=".lab9.MessangerIntro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".lab9.GaroSeroTest"/>
+        <activity android:name=".lab9.DeviceSizeTest" />
+        <activity android:name=".lab9.GaroSeroTest" />
         <activity android:name=".lab9.ButtonColor" />
         <activity android:name=".lab8.StopWatchTest" />
         <activity android:name=".lab8.Checkbox_Test" />
