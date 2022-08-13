@@ -32,8 +32,8 @@ class Checkbox_Test : AppCompatActivity() {
     }
 }
 
-class MyHandler : CompoundButton.OnCheckedChangeListener {
-    override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
-        Log.d("kkang", "check click... $p1")
-    }
-}
+//class MyHandler : CompoundButton.OnCheckedChangeListener {
+//    override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
+//        Log.d("kkang", "check click... $p1")
+//    }
+//}
