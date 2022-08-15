@@ -3,18 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".lab11.OneFragment"
+    tools:context=".lab11.TwoFragment"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/fragment_textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="OneFragment"
+        android:text="TwoFragment"
         android:textSize="20dp"
         android:textStyle="bold"
         android:gravity="center"
-        android:background="#0000FF"
+        android:background="#FF00FF"
         android:textColor="#FFFFFF"/>
 
 </LinearLayout>
