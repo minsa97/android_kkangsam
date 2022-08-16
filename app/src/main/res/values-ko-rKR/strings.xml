@@ -10,4 +10,9 @@
     <string name="intro_more">더 알아보기</string>
     <string name="intro_button">설정</string>
     <string name="intro_delay">나중에 하기</string>
+    <string name="hello_blank_fragment">Hello 빈 프래그먼트</string>
+
+    <string name="app_name">Ch11_JetPack</string>
+    <string name="drawer_opened">열린 서랍</string>
+    <string name="drawer_closed">닫힌 서람</string>
 </resources>

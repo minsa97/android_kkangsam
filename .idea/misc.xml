@@ -16,6 +16,7 @@
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/activity_fragment_state_adater_test.xml" value="0.1" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/activity_fragment_test.xml" value="0.1" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/activity_garo_sero_test.xml" value="0.2296195652173913" />
+        <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/activity_jetpack_project.xml" value="0.1" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/activity_kakao_notification_test.xml" value="0.1334853090172239" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/activity_kakao_pw.xml" value="0.2296195652173913" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/activity_main.xml" value="0.2296195652173913" />
@@ -36,10 +37,15 @@
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/activity_view_pager2_test.xml" value="0.1" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/dialog_input.xml" value="0.13297872340425532" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/fragment_one.xml" value="0.10587639311043566" />
+        <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/fragment_prj_one.xml" value="0.1" />
+        <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/fragment_prj_three.xml" value="0.1" />
+        <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/fragment_prj_two.xml" value="0.1" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/fragment_three.xml" value="0.1" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/fragment_two.xml" value="0.1" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/item.xml" value="0.1" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/item_pager.xml" value="0.1" />
+        <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/layout/item_recyclerview.xml" value="0.1" />
+        <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/menu/menu_main.xml" value="0.14583333333333334" />
         <entry key="..\:/Users/minsa/AndroidStudioProjects/kkangsam/app/src/main/res/menu/menu_test.xml" value="0.1787037037037037" />
       </map>
     </option>

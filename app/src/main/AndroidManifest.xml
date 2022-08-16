@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kkangsam">
         <activity
-            android:name=".lab11.FragmentStateAdaterTest"
+            android:name=".lab11.JetpackProject"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lab11.FragmentStateAdaterTest" />
         <activity android:name=".lab11.ViewPager2_Test" />
         <activity android:name=".lab11.Recyclerview_itemDecoration" />
         <activity android:name=".lab11.Recyclerview_Test" />
