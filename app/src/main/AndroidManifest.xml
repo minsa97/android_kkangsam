@@ -10,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kkangsam">
         <activity
-            android:name=".lab12.DetailActivity"
-            android:exported="true" />
-        <activity
-            android:name=".lab12.Intent01_Test"
+            android:name=".lab13.Intent02_Test"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".lab12.DetailActivity"
+            android:exported="true" />
+        <activity android:name=".lab12.Intent01_Test" />
         <activity android:name=".lab12.MaterialProjectTest" />
         <activity android:name=".lab12.NavigationView_Test" />
         <activity android:name=".lab12.Tablayout_Test" />
