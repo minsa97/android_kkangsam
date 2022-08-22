@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kkangsam">
+        <receiver
+            android:name=".lab14.MyReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
         <activity
-            android:name=".lab13.AddActivity"
-            android:exported="false" />
-        <activity
-            android:name=".lab13.ToDoList_App"
+            android:name=".lab14.SendBroadcast_Test"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lab13.AddActivity" />
         <activity android:name=".lab13.Coroutine_Test" />
         <activity android:name=".lab13.FullScreen_Test" />
         <activity android:name=".lab13.SaveActivityState_Test" />
