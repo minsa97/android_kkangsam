@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kkangsam">
         <service
-            android:name=".lab15.MyService2"
+            android:name=".lab15.MyService3"
             android:enabled="true"
             android:exported="true"></service>
 
         <activity
-            android:name=".lab15.BindServiceTest"
+            android:name=".lab15.MessengerBindingTest"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".lab15.MyService2"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".lab15.BindServiceTest" />
 
         <service
             android:name=".lab15.MyService"
