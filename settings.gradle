@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "kkangsam"
 include ':app'
+include ':ch15_service'
+include ':ch15_outer'
