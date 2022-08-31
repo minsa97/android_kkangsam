@@ -5,8 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.*
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-//import com.mctlhg.ch15_outer.MyAIDLInterface
+import com.mctlhg.ch15_outer.MyAIDLInterface
 import com.mctlhg.ch15_service.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
 
@@ -20,8 +21,8 @@ class MainActivity : AppCompatActivity() {
     var messengerJob: Job? = null;
 
     //aidl...........
-//    var aidlService: MyAIDLInterface? = null
-//    var aidlJob: Job? = null
+    var aidlService: MyAIDLInterface? = null
+    var aidlJob: Job? = null
 
     //messenger handler ......................
     inner class HandlerReplyMsg: Handler(Looper.getMainLooper()){
@@ -71,6 +72,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //aidl connection .......................
+    val aidlConnection: ServiceConnection = object: ServiceConnection {
+        override fun onServiceConnected(p0: ComponentName?, p1: IBinder?) {
+            aidlService = MyAIDLInterface.Stub.asInterface(p1)
+            aidlService!!.start()
+            binding.aidlProgress.max = aidlService!!.maxDuration
+            val backgroundScope = CoroutineScope(Dispatchers.Default + Job())
+            aidlJob = backgroundScope.launch {
+                while(binding.aidlProgress.progress < binding.aidlProgress.max){
+                    delay(1000)
+                    binding.aidlProgress.incrementProgressBy(1000)
+                }
+            }
+            connectionMode="aidl"
+            changeViewEnable()
+        }
+
+        override fun onServiceDisconnected(p0: ComponentName?) {
+            aidlService = null
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
@@ -80,8 +103,23 @@ class MainActivity : AppCompatActivity() {
 
         //messenger..........
         onCreateMessengerService()
+
+        //aidl................
+        onCreateAIDLService()
     }
 
+    override fun onStop() {
+        super.onStop()
+        if(connectionMode === "messenger"){
+            onStopMessengerService()
+        }else if(connectionMode === "aidl"){
+            onStopAIDLService()
+        }
+        connectionMode="none"
+        changeViewEnable()
+    }
+
+    //messenger..........
     private fun onCreateMessengerService() {
         replyMessenger = Messenger(HandlerReplyMsg())
         binding.messengerPlay.setOnClickListener {
@@ -104,6 +142,26 @@ class MainActivity : AppCompatActivity() {
         msg.what = 20
         messenger.send(msg)
         unbindService(messengerConnection)
+    }
+
+    //aidl.......................
+    private fun onCreateAIDLService() {
+        binding.aidlPlay.setOnClickListener {
+            val intent = Intent("ACTION_SERVICE_AIDL")
+            intent.setPackage("com.mctlhg.ch15_outer")
+            bindService(intent, aidlConnection, Context.BIND_AUTO_CREATE)
+        }
+        binding.aidlStop.setOnClickListener {
+            Log.d("kkangtest","stop.....")
+            aidlService!!.stop()
+            unbindService(aidlConnection)
+            aidlJob?.cancel()
+            connectionMode="none"
+            changeViewEnable()
+        }
+    }
+    private fun onStopAIDLService() {
+        unbindService(aidlConnection)
     }
 
     fun changeViewEnable() = when (connectionMode) {
