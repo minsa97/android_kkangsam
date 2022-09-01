@@ -1,5 +1,7 @@
 package com.mctlhg.ch15_service
 
+import android.app.job.JobInfo
+import android.app.job.JobScheduler
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
@@ -106,6 +108,9 @@ class MainActivity : AppCompatActivity() {
 
         //aidl................
         onCreateAIDLService()
+
+        //jobscheduler......................
+        onCreateJobScheduler()
     }
 
     override fun onStop() {
@@ -162,6 +167,15 @@ class MainActivity : AppCompatActivity() {
     }
     private fun onStopAIDLService() {
         unbindService(aidlConnection)
+    }
+
+    //JobScheduler
+    private fun onCreateJobScheduler(){
+        var jobScheduler: JobScheduler? = getSystemService(JOB_SCHEDULER_SERVICE) as JobScheduler
+        val builder = JobInfo.Builder(1, ComponentName(this, MyJobService::class.java))
+        builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED)
+        val jobInfo = builder.build()
+        jobScheduler!!.schedule(jobInfo)
     }
 
     fun changeViewEnable() = when (connectionMode) {
